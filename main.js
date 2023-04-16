@@ -242,14 +242,13 @@ const getDepth = (tree) => !tree?.children?.length ? 0 : 1 + Math.max(...tree.ch
 
 const addOneForLastLevel = (depth) => depth + 1
 
+//I took a litle bit of more time to find a beetter solution to add one for the last children since it has no children, it's not counted in the depth.
 
-//i took a litle bit of more time to find a beetter solution to add one for the last children since 
-//the last children are not counted in the depth.
-
-// i didn't want to took to much time on this so i just added a function to add one for the last level.
+// I didn't want to take to much time on this so i just added a function to add one for the last level.
 
 
-// i created a second tree to test the function with a bigger tree.
+
+//so In order to get only pure functions I created a function to add one for the last level.
 
 console.log(addOneForLastLevel(getDepth(tree)));
 console.log(addOneForLastLevel(getDepth(tree2)));
